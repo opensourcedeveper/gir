@@ -1,0 +1,203 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+class Controller_Blogs extends Admin_Controller 
+{
+	public function __construct()
+	{
+		parent::__construct();
+		$this->not_logged_in();
+		$this->data['page_title'] = 'Blogs';
+		$this->load->model('model_products');
+		$this->load->model('model_brands');
+		$this->load->model('model_category');
+		$this->load->model('model_stores');
+		$this->load->model('model_attributes');
+		$this->load->model('model_inventory');
+		$this->load->model('model_reports');
+		$this->load->model('model_blogs');
+	}
+
+	/* 
+	* It only redirects to the manage product page
+	*/
+	public function index()
+	{
+		$this->render_template('blogs/index', $this->data);	
+	}
+
+	/*
+	* It Fetches the products data from the product table 
+	* this function is called from the datatable ajax function
+	*/
+	public function fetchBlogsData()
+	{
+		$result = array('data' => array());
+
+		$data = $this->model_blogs->getBlogsData();
+
+		foreach ($data as $key => $value) {
+			$buttons = '';
+			if(in_array('updateBlogs', $this->permission)) {
+				$buttons .= '<a href="'.base_url('Controller_Blogs/update/'.$value['id']).'" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>';
+			}
+			if(in_array('deleteBlogs', $this->permission)) { 
+				$buttons .= ' <button type="button" class="btn btn-danger btn-sm" onclick="removeFunc('.$value['id'].')" data-toggle="modal" data-target="#removeModal"><i class="fa fa-trash"></i></button>';
+			}
+			$img = '<img src="'.base_url($value['image']).'" alt="'.$value['id'].'" class="img-circle" width="50" height="50" />';
+			$result['data'][$key] = array(
+				$value['id'],
+								$img,
+				$value['title'],
+				$buttons
+			);
+		} // /foreach
+		echo json_encode($result);
+	}	
+
+	/*
+	* If the validation is not valid, then it redirects to the create page.
+	* If the validation for each input field is valid then it inserts the data into the database 
+	* and it stores the operation message into the session flashdata and display on the manage product page
+	*/
+	public function create()
+	{
+		$this->form_validation->set_rules('blogTitle', 'blogTitle', 'trim|required');
+		if ($this->form_validation->run() == TRUE) {
+			$upload_image = $this->upload_image();
+			$slug = url_title($this->input->post('urlKeyword'), 'dash', true);
+			$data = array(
+				'title' => $this->input->post('blogTitle'),
+				'slug'  => $slug,
+				'image' => $upload_image,
+				'description' => $this->input->post('blogDescription'),
+				'metaTitle' => $this->input->post('metaTitle'),
+				'metaDescription' => $this->input->post('metaDescription'),
+				'metaKeyword' => $this->input->post('metaKeyword'),
+				'urlKeyword' => $this->input->post('urlKeyword'),
+				'created_by' => $this->session->userdata['id']
+			);
+			$create = $this->model_blogs->create($data);
+			if($create == true) {
+				$this->session->set_flashdata('success', 'Successfully created');
+				redirect('Controller_Blogs/', 'refresh');
+			}
+			else {
+				$this->session->set_flashdata('error', 'Error occurred!!');
+				redirect('Controller_Blogs/create', 'refresh');
+			}
+		}
+		else {
+			$this->render_template('blogs/create', $this->data);
+		}
+	}
+
+	/*
+	* This function is invoked from another function to upload the image into the assets folder
+	* and returns the image path
+	*/
+	public function upload_image()
+	{
+		$config['upload_path'] = 'assets/images/blogImage';
+		$config['file_name'] =  uniqid();
+		$config['allowed_types'] = 'gif|jpg|png';
+		$config['max_size'] = '1000';
+
+		$this->load->library('upload', $config);
+		if ( ! $this->upload->do_upload('blogImage'))
+		{
+			$error = $this->upload->display_errors();
+			return $error;
+		}
+		else
+		{
+			$data = array('upload_data' => $this->upload->data());
+			$type = explode('.', $_FILES['blogImage']['name']);
+			$type = $type[count($type) - 1];
+			
+			$path = $config['upload_path'].'/'.$config['file_name'].'.'.$type;
+			return ($data == true) ? $path : false;            
+		}
+	}
+
+	/*
+	* If the validation is not valid, then it redirects to the edit product page 
+	* If the validation is successfully then it updates the data into the database 
+	* and it stores the operation message into the session flashdata and display on the manage product page
+	*/
+	public function update($product_id)
+	{
+		if(!in_array('updateBlogs', $this->permission)) {
+			redirect('dashboard', 'refresh');
+		}
+
+		if(!$product_id) {
+			redirect('dashboard', 'refresh');
+		}
+		$this->form_validation->set_rules('blogTitle', 'blogTitle', 'trim|required');
+		if ($this->form_validation->run() == TRUE) {
+			$slug = url_title($this->input->post('urlKeyword'), 'dash', true);
+			$data = array(
+				'title' => $this->input->post('blogTitle'),
+				'slug'  => $slug,
+				'description' => $this->input->post('blogDescription'),
+				'metaTitle' => $this->input->post('metaTitle'),
+				'metaDescription' => $this->input->post('metaDescription'),
+				'metaKeyword' => $this->input->post('metaKeyword'),
+				'urlKeyword' => $this->input->post('urlKeyword'),
+			);
+			if($_FILES['blogImage']['size'] > 0) {
+				$upload_image = $this->upload_image();
+				$upload_image = array('image' => $upload_image);
+				$this->model_blogs->update($upload_image, $product_id);
+			}
+			$update = $this->model_blogs->update($data, $product_id);
+			if($update == true) {
+				$this->session->set_flashdata('success', 'Successfully updated');
+				redirect('Controller_Blogs/', 'refresh');
+			}
+			else {
+				$this->session->set_flashdata('error', 'Error occurred!!');
+				redirect('Controller_Blogs/update/'.$product_id, 'refresh');
+			}
+		}
+		else {
+			$this->data['blogs_data'] = $this->model_blogs->getBlogsData($product_id);;
+			$this->render_template('blogs/edit', $this->data); 
+		}   
+	}
+
+	/*
+	* It removes the data from the database
+	* and it returns the response into the json format
+	*/
+	public function remove()
+	{
+		if(!in_array('deleteBlogs', $this->permission)) {
+			redirect('dashboard', 'refresh');
+		}
+		
+		$id = $this->input->post('id');
+
+		$response = array();
+		if($id) {
+			$data = array(
+				'is_del' => '1',
+				'deleted_by' => $this->session->userdata['id']
+			);                
+			$delete = $this->model_blogs->update($data, $id);
+			if($delete == true) {
+				$response['success'] = true;
+				$response['messages'] = "Successfully removed"; 
+			}
+			else {
+				$response['success'] = false;
+				$response['messages'] = "Error in the database while removing the product information";
+			}
+		}
+		else {
+			$response['success'] = false;
+			$response['messages'] = "Refersh the page again!!";
+		}
+		echo json_encode($response);
+	}
+}
