@@ -82,12 +82,12 @@ And Global Infi Research stands ready to help with strategic data and insights. 
 
 
 <!-- What we do -->
-<div class="mxwidth4">
+<div class="container">
   <div class="secHead pb-2">
   <h2 class="">OUR SOLUTIONS</h2>
   </div>
 </div>
-<!-- <div class="container">
+<!-- <div class="container mxwidth4">
   <div class="secHead">
   <h2 class="">Our Solutions</h2>
   </div>
@@ -205,7 +205,7 @@ And Global Infi Research stands ready to help with strategic data and insights. 
 <!-- End -->
 <?php if(count($reports_data) > 0){?>
 <!-- Trending  -->
-<div class="mxwidth4">
+<div class="container">
   <div class="secHead pb-2">
   <h2 class="">TRENDING INSIGHTS</h2>
   </div>
@@ -221,53 +221,109 @@ And Global Infi Research stands ready to help with strategic data and insights. 
     <div id="wrapperTrend" class="">
 
 
-      <div class="trenReportPar ">
+      <div class="trenReportPar container">
            <ul class="nav nav-tabs nav-justified container pt-4 pb-3">
         <li class="active">
-         <h3> <a class="" href="#h-and-m" > <i class="fa fa-stethoscope"></i> <span> Healthcare <br> and Medical</span></a></h3>
+         <h3> <a class="" href="#h-and-m" > <i class="fa fa-stethoscope"></i> <span> Healthcare and Medical</span></a></h3>
         </li>
         <li class="">
-         <h3> <a class="" href="#c-and-m" ><i class="fa fa-flask"></i><span> Chemical <br> and Materials</span></a></h3>
+         <h3> <a class="" href="#c-and-m" ><i class="fa fa-flask"></i><span> Chemical and Materials</span></a></h3>
         </li>
         <li class="">
-         <h3> <a class="" href="#ict-semi" ><i class="fa fa-camera"></i><span> ICT  and <br> Semiconductor</span></a></h3>
+         <h3> <a class="" href="#ict-semi" ><i class="fa fa-camera"></i><span> ICT  and Semiconductor</span></a></h3>
         </li>
         <li class="">
-         <h3> <a class="" href="#food-bev" ><i class="fa fa-glass"></i><span> Food and <br> beverages</span></a></h3>
+         <h3> <a class="" href="#food-bev" ><i class="fa fa-glass"></i><span> Food and Beverages</span></a></h3>
         </li>
       </ul>
+
+      <!-- <div class="row nav nav-tabs nav-justified container pt-4 pb-3">
+        <div class="col-md-3 col-lg-3">
+          <div class="active">
+          <h3> <a class="" href="#h-and-m" > <i class="fa fa-stethoscope"></i> <span> Healthcare <br> and Medical</span></a></h3>
+          </div>
+        </div>
+        <div class="col-md-3 col-lg-3">
+        <div class="">
+          <h3> <a class="" href="#c-and-m" ><i class="fa fa-flask"></i><span> Chemical <br> and Materials</span></a></h3>
+        </div>
+        </div>
+        <div class="col-md-3 col-lg-3">
+        <div class="">
+          <h3> <a class="" href="#ict-semi" ><i class="fa fa-camera"></i><span> ICT  and <br> Semiconductor</span></a></h3>
+        </div>
+        </div>
+        <div class="col-md-3 col-lg-3">
+        <div class="">
+          <h3> <a class="" href="#food-bev" ><i class="fa fa-glass"></i><span> Food and <br> beverages</span></a></h3>
+        </div>
+        </div>
+      </div> -->
+
+
         <div class="tab-content container bg-transp">
           <div id="h-and-m" class="content-pane is-active">
             <div class="row">
               
               <div class="col-md-12 col-sm-12 bg-transp">
+                <div class="row">
                 <div class="trenrpSinglePr container">
 				
-				<?php
-                    $i = 0;
-                    foreach ($reports_data as $report) {
-                        if($report['category'] != 10)
-                            continue;
-                       if($i >= 5) 
-                           break;
-                           $i++;
-                    ?>
-				
-                  <div class="hmr-single mb-1 d-flex">
+                  <?php
+                              $i = 0;
+                              foreach ($reports_data as $report) {
+                                  if($report['category'] != 10)
+                                      continue;
+                                if($i >= 5) 
+                                    break;
+                                    $i++;
+                              ?>
                   
-                    <div class="trendtandbtn">
-                      <!--<h3 class="f20 pt-2 pb-1 d-flex"> <i class="fa fa-thumb-tack align-self-center prime-color pr-3"></i>   <a href="<?php // echo base_url('reports/'.$report['id'].'/'.$report['slug'])?>" class="prime-color"><?php // echo $report['title'];?></a></h3>-->
-                      <h3 class="f20 pt-2 pb-1 d-flex"> <i class="fa fa-thumb-tack align-self-center prime-color pr-3"></i>   <a href="<?php echo base_url('report/'.$report['slug'])?>" class="prime-color"><?php echo $report['title'];?></a></h3>
-                        <!-- <span class="pr-3 f14 op05" style="border-right:1px solid #000;">Published Date : <strong><?php // echo $report['dateOfPublished'];?></strong> </span>
-                        <span class="pr-3 pl-3 f14 op05" style="border-right:1px solid #000;">Pages : <strong><?php // echo $report['pages'];?></strong> </span>
-                      -->
-                      <a href="#" class="trenrpbtn">Know&nbsp;More</a>
+                            <div class="hmr-single mb-1 d-flex">
+                            
+                              <div class="trendtandbtn">
+                                <!--<h3 class="f20 pt-2 pb-1 d-flex"> <i class="fa fa-thumb-tack align-self-center prime-color pr-3"></i>   <a href="<?php // echo base_url('reports/'.$report['id'].'/'.$report['slug'])?>" class="prime-color"><?php // echo $report['title'];?></a></h3>-->
+                                <h3 class="f20 pt-2 pb-1 d-flex"> <i class="fa fa-thumb-tack align-self-center prime-color pr-3"></i>   <a href="<?php echo base_url('report/'.$report['slug'])?>" class="prime-color"><?php echo $report['title'];?></a></h3>
+                                  <!-- <span class="pr-3 f14 op05" style="border-right:1px solid #000;">Published Date : <strong><?php // echo $report['dateOfPublished'];?></strong> </span>
+                                  <span class="pr-3 pl-3 f14 op05" style="border-right:1px solid #000;">Pages : <strong><?php // echo $report['pages'];?></strong> </span>
+                                -->
+                                <a href="#" class="trenrpbtn">Know&nbsp;More</a>
+                                </div>
+                            </div>
+                    
+                    <?php  } ?>
+
+          
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="trend-box">
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                        <p>Aenean feugiat vel ante at bibendum. Curabitur... <a href="">see more</a></p>
+                        </div>                
                       </div>
-                  </div>
-				  
-				  <?php  } ?>
+                      <div class="col-md-3">
+                        <div class="trend-box">
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                        <p>Aenean feugiat vel ante at bibendum. Curabitur... <a href="">see more</a></p>
+                        </div>                
+                      </div>
+                      <div class="col-md-3">
+                        <div class="trend-box">
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                        <p>Aenean feugiat vel ante at bibendum. Curabitur... <a href="">see more</a></p>
+                        </div>                
+                      </div>
+                      <div class="col-md-3">
+                        <div class="trend-box">
+                        <h5>Lorem ipsum dolor sit amet</h5>
+                        <p>Aenean feugiat vel ante at bibendum. Curabitur... <a href="">see more</a></p>
+                        </div>                
+                      </div>
+                    </div>         
 				  
                 </div>
+                </div>
+
               </div>
             </div>
      
@@ -389,7 +445,7 @@ And Global Infi Research stands ready to help with strategic data and insights. 
 <?php }?>
 <!--  -->
 <!-- Blogs & PRs -->
-<div class="mxwidth4">
+<div class="container xs-blog-bg">
   <div class="secHead pb-2">
   <h2 class="">OUR OTHER SOLUTIONS</h2>
   </div>
@@ -399,62 +455,66 @@ And Global Infi Research stands ready to help with strategic data and insights. 
   <h2 class="">Papers</h2>
   </div>
 </div> -->
-<section class=" hmBlogPrBg">
+<section class="hmBlogPrBg">
   
   <div class="container">
     <!-- <h2 class="sec-head font-weight-bold text-uppercase ls-1 prime-color">Insights</h2> -->
-  <div class="row pt-4 pb-4 ">
-    <div class="col-md-6 col-sm-12">
-      <h3 class=" pb-4 f45 font-weight-bold ls-1 text  pt-4 clrfff">PRESS RELEASES</h3>
-      <?php
-//        $i = 0;
-        foreach ($pressrelease_data as $pr) {
-//        if($i >= 3) 
-//            break;
-//             $i++;
-        ?>
-      
-      <div class="row pr-3 pt-2 pb-2">
-        <div class="col-sm-3">
-          <img src="<?php echo base_url($pr['image']) ?>" alt="" class="w-100" style="min-height: 98px;border-radius: 18px;">
-        </div>
-        <div class="col-sm-9 hmprSingle">
-          <h4 class="f22"><a href="<?php echo base_url('pressrelease/'.$pr['id'].'/'.$pr['slug']) ?>" class="clrfff alinkhoverfff"><?php echo $pr['title'];?></a></h4>
-          <p class="d-flex"> <i class='fa fa-user pr-2 user clrfff'> <?php echo $pr['fullname'];?></i> <span class="clrfff date" ><i class="fa fa-calendar pr-2"></i> <?php echo $pr['created_at'];?></span></p>
-     
-          <!--<p class="text-right"><a href="<?php // echo base_url('Cust/Controller_PressRelease/details/'.$pr['id']) ?>" class="clrfff" >Read More</a></p>-->
-        </div>
-      </div>
-      <hr>
-       <?php  } ?>
+  <div class="row pt-0 pt-md-4 pb-4 ">
+    <div class="col-md-6 col-sm-12 order-md-1 order-2">
+          <h3 class=" pb-4 f45 font-weight-bold ls-1 text  pt-4 clrfff mt-4 mt-md-0">PRESS RELEASES</h3>
+          <?php
+      //        $i = 0;
+            foreach ($pressrelease_data as $pr) {
+      //        if($i >= 3) 
+      //            break;
+      //             $i++;
+            ?>
+          
+          <div class="row pr-3 pt-2 pb-2">
+            <div class="col-3">
+              <img src="<?php echo base_url($pr['image']) ?>" alt="" class="w-100" style="min-height: 98px;border-radius: 18px;">
+            </div>
+            <div class="col-9 hmprSingle">
+              <h4 class="f22"><a href="<?php echo base_url('pressrelease/'.$pr['id'].'/'.$pr['slug']) ?>" class="clrfff alinkhoverfff"><?php echo $pr['title'];?></a></h4>
+              <p class="d-flex"> <i class='fa fa-user pr-2 user clrfff'> <?php echo $pr['fullname'];?></i> <span class="clrfff date" ><i class="fa fa-calendar pr-2"></i> <?php echo $pr['created_at'];?></span></p>
+        
+              <!--<p class="text-right"><a href="<?php // echo base_url('Cust/Controller_PressRelease/details/'.$pr['id']) ?>" class="clrfff" >Read More</a></p>-->
+            </div>
+          </div>
+          <hr>
+          <?php  } ?>
    
     </div>
-    <div class="col-md-6 col-sm-12 hm-blogs pl-4">
+
+
+    <div class="col-md-6 col-sm-12 hm-blogs pl-4 order-md-2 order-1">
       <h3 class="pb-4 f45 font-weight-bold ls-1 text  pt-4 clrfff">BLOGS</h3>
       <div class="row ">
-          <?php
-//        $i = 0;
-        foreach ($blogs_data as $blog) {
-//        if($i >= 1) 
-//            break;
-//             $i++;
-        ?>
-        <div class="col-sm-12 hmbgSingle align-self-center">
-          <div class="content">
-            <!-- <img class="left-side" src="assets/images/cust/img/industry-report.png" alt="Any Image"> -->
-            <img src="<?php echo base_url($blog['image']) ?>" alt="" class="" style="height:210px; width:100%;border-radius: 18px;">
-            <h4 class="pt-4 f23"> <a href="<?php echo base_url('blogs/'.$blog['id'].'/'.$blog['slug']) ?>" class="clrfff alinkhoverfff"><?php echo $blog['title'];?></a></h4>
-            <p class="clrfff"><?php echo mb_strimwidth($blog['description'], 0, 300, "...");?></p>
-            <p class="d-flex"> <i class='fa fa-user pr-2 user clrfff'> <?php echo $blog['fullname'];?></i> <span class="clrfff date" ><i class="fa fa-calendar pr-2"></i> <?php echo $blog['created_at'];?></span></p>
+            <?php
+          //        $i = 0;
+          foreach ($blogs_data as $blog) {
+          //        if($i >= 1) 
+          //            break;
+          //             $i++;
+          ?>
+          <div class="col-sm-12 hmbgSingle align-self-center">
+            <div class="content">
+              <!-- <img class="left-side" src="assets/images/cust/img/industry-report.png" alt="Any Image"> -->
+              <img src="<?php echo base_url($blog['image']) ?>" alt="" class="" style="height:210px; width:100%;border-radius: 18px;">
+              <h4 class="pt-4 f23"> <a href="<?php echo base_url('blogs/'.$blog['id'].'/'.$blog['slug']) ?>" class="clrfff alinkhoverfff"><?php echo $blog['title'];?></a></h4>
+              <p class="clrfff"><?php echo mb_strimwidth($blog['description'], 0, 300, "...");?></p>
+              <p class="d-flex"> <i class='fa fa-user pr-2 user clrfff'> <?php echo $blog['fullname'];?></i> <span class="clrfff date" ><i class="fa fa-calendar pr-2"></i> <?php echo $blog['created_at'];?></span></p>
+            </div>
           </div>
+		      <?php  } ?>
         </div>
-		<?php  } ?>
-      </div>
       <!-- <hr> -->
       <!-- <p class="text-right p-4" >
       <a href="blog-listing.html" class="clrfff f21">All blogs</a>
-    </p> -->
+      </p> -->
     </div>
+
+
   </div>
 </div>
 </section>
@@ -483,9 +543,9 @@ And Global Infi Research stands ready to help with strategic data and insights. 
 </section>
 <!--  -->
 <!-- Client -->
-<div class="mxwidth4">
+<div class="container">
   <div class="secHead pb-2">
-  <h2 class="">WHAT OUR CLIENTS SAY !</h2>
+  <h2>WHAT OUR CLIENTS SAY !</h2>
   </div>
 </div>
 <!-- <div class="container">
@@ -497,7 +557,21 @@ And Global Infi Research stands ready to help with strategic data and insights. 
     <div class="container pb-5">
       <!-- <h2 class="sec-head font-weight-bold text-uppercase ls-1 prime-color pb-5 pt-3">Clients</h2> -->
       <div class="row p-0 mb-3">
-        <div class="col-md-6 col-sm-12 hideinMobile align-self-center" id="testim" >
+      <div class="col-md-6 col-sm-12 align-self-center">
+        <!-- <div class="client-title">WHAT OUR CLIENTS SAY !</div> -->
+          <div class="">
+                  <div class="clientInfo">
+                    <h3 class="client-info-title pt-4 pb-4 clrfff ls-1 ">
+                          <span> A Research Agency</span> <br> <span class="pt-3 pb-3"> With</span><span> Fortune 500 Clients</span>
+                    </h3>
+
+               
+
+                  </div>
+            
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12 align-self-center" id="testim" >
           <div class="client-testimonials">
             <div class="row container-fluid">
               <div class="col-lg-12 grid-margin stretch-card">
@@ -510,13 +584,13 @@ And Global Infi Research stands ready to help with strategic data and insights. 
                           <div class="testimonials pt-4 pb-4">
                               <div class="item" style="padding: 27px 0;">
                                 <!-- <img src="assets/images/cust/img/man.png" alt=""> -->
-                                <p class="text-center clrfff f20 font-italic mt-3"><i class="fa fa-quote-left pr-2"></i> While it is easy to obtain data on mainstream products categories, it is difficult to reach reliable quantitative data on niche segments. Regal Intelligence enabled Ferrero to perform educated decisions on bake-off bakery.<i class="fa fa-quote-right pl-2"></i> </p>
-                              <p class="clrfff text-right">-Business Intelligence Specialist, Ferrero</p>
+                                <p class="text-center f20 font-italic mt-3"><i class="fa fa-quote-left pr-2"></i> While it is easy to obtain data on mainstream products categories, it is difficult to reach reliable quantitative data on niche segments. Regal Intelligence enabled Ferrero to perform educated decisions on bake-off bakery.<i class="fa fa-quote-right pl-2"></i> </p>
+                              <p class="text-right">-Business Intelligence Specialist, Ferrero</p>
                               </div>
                               <div class="item">
                                 <!-- <img src="assets/images/cust/img/avatar2.png" alt=""> -->
-                                <p class="text-center clrfff f20 font-italic mt-3"><i class="fa fa-quote-left pr-2"></i> I would like to express my utmost appreciation to Regal Intelligence's Team who handled the report that I ordered. The team was very accommodating and prompt in responding to my clarifications on the report content and following up if whether there are still issues that I want to be addressed.<i class="fa fa-quote-right pl-2"></i> </p>
-                                <p class="clrfff text-right">-Independent Drilling Consultant, Philippines</p>
+                                <p class="text-center f20 font-italic mt-3"><i class="fa fa-quote-left pr-2"></i> I would like to express my utmost appreciation to Regal Intelligence's Team who handled the report that I ordered. The team was very accommodating and prompt in responding to my clarifications on the report content and following up if whether there are still issues that I want to be addressed.<i class="fa fa-quote-right pl-2"></i> </p>
+                                <p class="text-right">-Independent Drilling Consultant, Philippines</p>
                               </div>
                             
                           </div>
@@ -535,19 +609,7 @@ And Global Infi Research stands ready to help with strategic data and insights. 
           </div>
           </div>
         </div>
-        <div class="col-md-6 col-sm-12 align-self-center">
-          <div class="">
-                  <div class="clientInfo">
-                    <h3 class="text-center pt-4 pb-4 clrfff ls-1 ">
-                          <span> A Research Agency</span> <br> <span class="pt-3 pb-3"> With</span> <br> <span> Fortune 500 Clients</span>
-                    </h3>
-
-               
-
-                  </div>
-            
-          </div>
-        </div>
+        
      
       </div>
       
@@ -559,20 +621,20 @@ And Global Infi Research stands ready to help with strategic data and insights. 
         <div class="container">
           <div class="row">
   
-          <div class="col-lg-9 col-md-12 ">
-          <div class="d-flex">
-          
-          
-              <i class="fa fa-phone pr-2"></i>
-              <div class="text-left" style="margin: auto 0;">
-                <h4 class="pl-0"><span>NEED ASSISTANCE ON ANY REPORT</span> </h4> 
-                <span>Contact our analyst for free consultation on report</span> 
+            <div class="col-lg-9 col-md-12 ">
+              <div class="requote-inner">
+              
+              
+                  <i class="fa fa-phone pr-2"></i>
+                  <div class="" style="margin: auto 0;">
+                    <h4 class="pl-0"><span>NEED ASSISTANCE ON ANY REPORT</span> </h4> 
+                    <span>Contact our analyst for free consultation on report</span> 
+                  </div>
+                  </div>
               </div>
+              <div class="col-lg-3 col-md-12 align-self-center">
+                    <a href="<?php echo base_url('contact-us') ?>">CONTACT US</a>
               </div>
-          </div>
-          <div class="col-lg-3 col-md-12 align-self-center">
-                <a href="<?php echo base_url('contact-us') ?>">CONTACT US</a>
-          </div>
           </div>
         </div>
    

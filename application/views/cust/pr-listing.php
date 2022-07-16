@@ -42,7 +42,7 @@
     </div>
   </nav> -->
 <!--  -->
-<div class="mxwidth4 mt-4">
+<div class="container mt-4">
   <div class="secHead pb-2">
   <h1 class="">Press Release</h1>
   </div>

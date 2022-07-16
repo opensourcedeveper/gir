@@ -1,4 +1,19 @@
+<style>
+    .navbar-brand {
+    width: 100px !important;
+  }
+  .navbar-brand img, .ftr-data img {
+    width: 100px !important;    
+}
+* { word-break: break-word;}
 
+
+@media screen and (max-width: 991.98px) {
+    .h2 {
+    font-size: 1.5rem;
+}
+}
+</style>
  
   <header class="main-header">
       
@@ -11,7 +26,7 @@
         </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenus" aria-controls="topMenus" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
-          <i class="fa fa-bars"></i>
+          <!-- <i class="fa fa-bars"></i> -->
         </span>
       </button>
     

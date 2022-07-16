@@ -29,39 +29,28 @@
         .pthTitle{
             display: none;
         }
-        .secHead h1{
+        /* .secHead h1{
           margin-top: 151px;
-        }
+        } */
+        .deslist li a { background:#0056b3; color:#fff}
+        .deslist li:nth-child(2) a { background:#fff; color:#000 }
+        .sr-forms a:nth-child(1) { color:#fff}
+        .sr-forms a { color:#000}
+        .deslist li a, .sr-forms a { display:block; border: 1px solid #000; margin-bottom:15px; padding:10px; text-align:center}
     </style>
 </head>
 <body>
-<div class="mxwidth4 mt-4">
+<div class="container mt-4">
   <div class="secHead pb-2">
   <h1 class=""><?php echo $reports_data['metaKeyword']?></h1>
   </div>
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <section class="reportTitle pt-3 pb-5" >
   <div class="container">
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb bgtrans pl-0 pt-4">
+      <ol class="breadcrumb bgtrans">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
         <li class="breadcrumb-item"><a href="#">Report</a></li>
         <li class="breadcrumb-item active" aria-current="page"><?php echo mb_strimwidth($reports_data['title'], 0, 100, "...");?></li>

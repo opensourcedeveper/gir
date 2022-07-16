@@ -18,10 +18,11 @@
         .secHead h1{
           margin-top: 151px;
         }
+        
     </style>
 </head>
 <body>
-<div class="mxwidth4 mt-4">
+<div class="container mt-4">
   <div class="secHead pb-2">
   <h1 class="">REPORTS</h1>
   </div>

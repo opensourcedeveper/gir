@@ -13,13 +13,13 @@
         .pthTitle{
             display: none;
         }
-        .secHead h1{
+        /* .secHead h1{
           margin-top: 151px;
-        }
+        } */
     </style>
 </head>
 <body>
-<div class="mxwidth4 mt-4">
+<div class="container mt-4">
   <div class="secHead pb-2">
   <h1 class=""><?php echo $pressrelease_data['urlKeyword']?></h1>
   
@@ -28,12 +28,12 @@
   <section class="">
 
    <div class="container p-3">
-        <div class="row justify-content-center pt-5">
+        <div class="row justify-content-center">
             <div class="col-sm-12 col-md-12">
                 <div class="singleBlog">
                     
                           <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb pl-0" style="background-color: transparent;">
+                            <ol class="breadcrumb">
                               <li class="breadcrumb-item"><a href="#">Home</a></li>
                               <li class="breadcrumb-item"><a href="#">Press Release</a></li>
                               <li class="breadcrumb-item active" aria-current="page"><?php echo mb_strimwidth($pressrelease_data['title'], 0, 100, "...");?></li>
