@@ -203,7 +203,7 @@ And Global Infi Research stands ready to help with strategic data and insights. 
 
   </section>
 <!-- End -->
-<?php if(count($reports_data) > 0){?>
+<?php if(count($reports_data) >= 0){?>
 <!-- Trending  -->
 <div class="container">
   <div class="secHead pb-2">
