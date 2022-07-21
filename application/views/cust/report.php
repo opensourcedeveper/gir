@@ -37,6 +37,11 @@
         .sr-forms a:nth-child(1) { color:#fff}
         .sr-forms a { color:#000}
         .deslist li a, .sr-forms a { display:block; border: 1px solid #000; margin-bottom:15px; padding:10px; text-align:center}
+        .licese { border:1px solid #f1f1f1;}
+        .licese h4 { padding:10px; font-size:16px; color:#000; background:#ececec}
+        .licese label { color:#000; font-weight:600;}
+        .licese button { background:#0056b3; color:#fff; font-weight:700; font-size:18px}
+        
     </style>
 </head>
 <body>
@@ -47,7 +52,7 @@
 </div>
 
 
-<section class="reportTitle pt-3 pb-5" >
+<section class="reportTitle pt-3 pb-4 pb-lg-5" >
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb bgtrans">
@@ -57,27 +62,47 @@
       </ol>
     </nav>
     <div class="row">
-      <div class="col-md-9 col-sm-12">
+      <div class="col-md-8 col-lg-9 col-sm-12">
                <!-- <h1 class="pt-3 pb-3 op05"><?php echo $reports_data['metaKeyword']?></h1> -->
-        <h2 class=""><?php echo $reports_data['title']?></h2>
+        <h2 class="pb-4 pb-md-0"><?php echo $reports_data['title']?></h2>
         <!--<h1 class="op05"><?php echo $reports_data['title']?></h1>-->
         <!-- <p class="op05">Pages : <?php echo $reports_data['pages']?></p> -->
       </div>
-      <div class="col-md-3 col-sm-12">
-        
-        <div>
-          <p class="price"><i class="fa fa-dollar"></i><?php echo $reports_data['singleUserAmount']?></p>
-          <!--<p class="buybtn"><a href="buy-now" class="clrfff">BUY NOW</a></p>-->
-          <p class="buybtn"><a href="<?php echo base_url('buy-now/'.$reports_data['id'])?>" class="clrfff">BUY NOW</a></p>
-          <!--<a href="<?php // echo base_url('buy-now/'.$report['id'])?>">Buy now</a>-->
+      <div class="col-md-4 col-lg-3 col-sm-12">
+
+      <div class='licese'>
+        <h4>Choose License Type</h4>
+        <div class='d-flex justify-content-between p-2'>
+          <div>
+            <input id='single_user' type='radio' name='license' value='Single User'>
+            <label for="single_user">Single User</label>
+          </div>
+          <span>$2000</span>
         </div>
+        <div class='d-flex justify-content-between p-2'>
+          <div>
+          <input id='enterprise_user' type='radio' name='license' value='Enterprise User'>
+            <label for="enterprise_user">Enterprise User</label>
+          </div>
+          <span>$4000</span>
+        </div>
+        <button class='btn btn-block mt-2'>Buy now</button>
+      </div>
+        
+        <!-- <div>
+          <p class="price"><i class="fa fa-dollar"></i><?php echo $reports_data['singleUserAmount']?></p>
+          <p class="buybtn"><a href="buy-now" class="clrfff">BUY NOW</a></p>
+          <p class="buybtn"><a href="<?php echo base_url('buy-now/'.$reports_data['id'])?>" class="clrfff">BUY NOW</a></p>
+          <a href="<?php // echo base_url('buy-now/'.$report['id'])?>">Buy now</a>
+        </div> -->
+
       </div>
     </div>
   </div>
 </section>
 
 <div class="container singlRp">
-  <div class="row pt-5 pb-5">
+  <div class="row pb-5">
     <div class="col-lg-3 col-md-12 col-sm-12">
       <!-- <ul id="tabs" class="nav nav-tabs" role="tablist">
         <li class="nav-item">
@@ -219,10 +244,10 @@
 <section class="sectionWcu mt-5 mb-5">
  
 
-  <div class="container pb-4">
+  <div class="container">
 
      <div class="container">
-       <div class="row pt-5">
+       <div class="row">
          <div class="col-md-5 col-sm-12 align-self-center">
          <h4 class="font-weight-bold ls-1 prime-color">What should be an effective go-to-market strategy that delivers exceptional results?</h4>
          <!-- <h5>Lorem ipsum dolor sit amet lorem</h5> -->

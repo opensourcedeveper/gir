@@ -33,7 +33,7 @@
       <div class="container">
         <!--<p class="f20 op05 text-center pb-3 pt-3 pl-4 bg-fff">Select Industry</p>-->
       <div class="row rpListSelectInd">
-      <div class="col-md-12 text-center">
+      <div class="col-md-4">
           <div class="rplistsel">
               <a href="<?php echo base_url('reports')?>"> <i class="fa fa-book"></i>  All Reports</a>
           </div>
