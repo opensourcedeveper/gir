@@ -156,7 +156,7 @@
       <li class="nav-item"><a class="nav-link mainmenua" href="<?php echo base_url('contact-us') ?>"> Contact </a></li>
     </ul>
       
-    <form action="<?php echo base_url('search') ?>" method="post" class="hidemax991 form-inline my-2 my-lg-0 inner-addon" style="position:relative;">
+    <form action="<?php echo base_url('search') ?>" method="post" class="form-inline my-2 my-lg-0 inner-addon" style="position:relative;">
     <button class="btn btn-outline-light my-2 my-sm-0" type="submit" style="right: 8px;position: absolute; border:none;">
         <i class="fa fa-search"></i>
       </button>

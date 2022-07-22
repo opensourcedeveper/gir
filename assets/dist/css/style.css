@@ -116,7 +116,7 @@ section {
   color: #00c6ff;
 }
 .bg-prime {
-  background-color: #1a3460 !important;
+  background-color: #23487f !important;
 }
 .bg-sec {
   background-color: #3368bf !important;
@@ -1573,8 +1573,8 @@ hmBlogPrBg
 .giFromsinputgroup input::placeholder,
 .giFromsinputgroup select,
 .giFromsinputgroup textarea::placeholder {
-  color: #fff;
-  opacity: 0.7;
+  color: rgb(255, 255, 255);
+  opacity: 1;
 }
 
 .giFromsinputgroup .form-control:focus {
@@ -1987,7 +1987,7 @@ hmBlogPrBg
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background: rgba(26, 52, 96, 0.7);
+  background: rgba(35, 72, 127, 0.5);
 }
 
 /* .formImage{
@@ -2081,14 +2081,18 @@ hmBlogPrBg
 .p-4px {
   padding: 4px;
 }
+.formsLeftData h2 span {
+  font-size: 18px;
+  font-weight: 400;
+}
 .formsLeftData h2 i,
 .formsLeftData h3 i {
   border: 2px solid;
   text-align: center;
   margin: 21px 17px 0 0;
-  padding: 15px 0px;
-  width: 74px;
-  font-size: 34px;
+  padding: 10px 0px;
+  width: 50px;
+  font-size: 20px;
   border-radius: 10px;
 }
 .formsLeftData .card {
@@ -2097,13 +2101,17 @@ hmBlogPrBg
 }
 .formsLeftData h2,
 .formsLeftData h3 {
-  width: max-content;
-  cursor: pointer;
   transition: all 0.3s ease-in;
 }
-.formsLeftData h2:hover,
+/* .formsLeftData h2:hover,
 .formsLeftData h3:hover {
   transform: scale(0.9);
+} */
+.formsLeftData h3 {
+  font-size: 22px;
+}
+.formsLeftData hr {
+  border-top: 1px solid #fff;
 }
 .prblog {
   background-image: url("../../images/cust/img/banner.jpg");
@@ -2339,7 +2347,7 @@ span.submit__error--empty {
 .giFromsbuyinputgroup input::placeholder,
 .giFromsbuyinputgroup select,
 .giFromsbuyinputgroup textarea::placeholder {
-  color: #fff !important;
+  color: rgb(255, 255, 255) !important;
   opacity: 0.75 !important;
   font-size: 15px;
 }
@@ -2673,10 +2681,14 @@ span.submit__error--empty {
   display: flex;
   flex-flow: row;
 }
-
-
+#captchaBackground {
+  flex-wrap: wrap;
+}
 
 @media screen and (max-width: 767px) {
+  .staticinfo {
+    padding: 0 15px;
+  }
   .xs-blog-bg {
     background-color: #f5f5f5;
     padding-top: 30px;
@@ -2684,7 +2696,8 @@ span.submit__error--empty {
   .xs-blog-bg .secHead.pb-2 h2 {
     margin-top: 0;
   }
-  .secHead h2 {
+  .secHead h2,
+  .secHead h1 {
     color: #000;
     font-size: 20px;
     padding: 0;
@@ -2771,6 +2784,36 @@ span.submit__error--empty {
   .ftrlinks a {
     display: block;
   }
+  .formImage,
+  .formImage .bg-prime {
+    background-image: none;
+    background-color: #fff !important;
+  }
+  .formImage::before {
+    background: none;
+  }
+  .formsLeftData h3,
+  .formsLeftData span,
+  .formsLeftData h1,
+  .formsLeftData h2 i,
+  .formsLeftData h3 i,
+  .formImage .bg-prime .clrfff,
+  .giFromsinputgroup .form-control,
+  .giFromsinputgroup select {
+    color: #000 !important;
+  }
+  .giFromsinputgroup input::placeholder,
+  .giFromsinputgroup select,
+  .giFromsinputgroup textarea::placeholder {
+    color: rgb(0, 0, 0);
+    opacity: 1;
+  }
+  .bg-prime.bx-shadow2 {
+    box-shadow: 0px 0px 24px -6px rgb(0 0 0 / 25%);
+  }
+  .requestSampleSubmit {
+    background: #0056b3;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2812,5 +2855,18 @@ span.submit__error--empty {
   }
   .navbar-brand.new img {
     width: 100% !important;
+  }
+  .carousel {
+    margin-top: 121px !important;
+  }
+  .navbar-light .navbar-toggler {
+    border-color: #fff;
+  }
+  #topNav form input {
+    width: 100% !important;
+    background-color: #fff;
+  }
+  .formsLeftData h3 {
+    font-size: 20px;
   }
 }

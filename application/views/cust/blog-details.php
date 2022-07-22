@@ -19,7 +19,7 @@
     </style>
 </head>
 <body>
-<div class="mxwidth4 mt-4">
+<div class="container mt-4">
   <div class="secHead pb-2">
 
   <h1><?php echo $blogs_data['urlKeyword']?></h1>
@@ -33,7 +33,7 @@
                 <div class="singleBlog"> 
                     
                           <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb pl-0" style="background-color: transparent;">
+                            <ol class="breadcrumb">
                               <li class="breadcrumb-item"><a href="#">Home</a></li>
                               <li class="breadcrumb-item"><a href="#">Blogs</a></li>
                               <li class="breadcrumb-item active" aria-current="page"><?php echo mb_strimwidth($blogs_data['title'], 0, 100, "...");?></li>

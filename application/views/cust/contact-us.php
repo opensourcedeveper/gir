@@ -37,9 +37,6 @@
 margin-top: 0 !important;
 }
 
-
-
-
     </style>
 </head>
 <body>
@@ -52,24 +49,25 @@ margin-top: 0 !important;
                
                 </ol>
             </nav> -->
-            <div class="pb-5 pt-5">
-             
-            </div>
+            <div class="pb-5 mt-5"></div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-12 col-md-6">
                     <div class="clrfff formsLeftData">
-                        <h1 class="pb-5 f45"> <span class="f25">Feel free</span> <br> to connect <span class="f25"> with us !</span> </h1>
-                        <h2><i class="fa fa-envelope"></i>info@globalinfiresearch.com</h2>
-                        <h2><i class="fa fa-phone"></i> +91 987-6543-210</h2>
+                        <h3>Hemoconcentrators Market Information With Prominent players, Production, Consumption, Revenue, Price and Forecasts to 2027</h3>
+                        <span>Industry - Helthcare & Medical</span>
+                        <hr class='d-none d-md-block mt-5'>
+                        <h1 class="pb-0 pb-md-5 f45"> <span class="f25">Feel free</span> <br> to connect <span class="f25"> with us !</span> </h1>
+                        <h2><i class="fa fa-envelope"></i><span>info@globalinfiresearch.com</span></h2>
+                        <h2 class='pb-5 pb-md-0'><i class="fa fa-phone"></i><span> +91 987-6543-210</span></h2>
                     </div>
                 </div>
-                <div class="col-md-6 bg-prime bx-shadow2">
-                    <div class="pt-3 pb-5">
+                <div class="col-12 col-md-6">
+                    <div class="p-5 bg-prime bx-shadow2">
                         <form role="form" id="withCaptchaForm" action="<?php echo base_url('contact-us')?>" method="post" enctype="multipart/form-data">
                         <?php // echo form_open( base_url('Cust/Controller_Report/contactus_request')); ?>
                         <?php // echo form_open( base_url('contact-us')); ?>
                         
-                            <h4 class="f24 text-center clrfff pt-2">CONTACT US</h4> 
+                            <h4 class="f24 text-center clrfff">CONTACT US</h4> 
                             
                
                             
@@ -90,35 +88,19 @@ margin-top: 0 !important;
                             <input type="hidden" class="form-control" id="type" name="type" value="contact">
                             
                            <div class="input-group mb-2 mr-sm-2 giFromsinputgroup form-group">
-                               <div class="input-group-prepend">
-                               <div class="input-group-text">
-                                   <i class="fa fa-user clrfff"></i>
-                               </div>
-                               </div>
+                               
                                <input type="text" class="form-control" id="full_name" name="full_name" placeholder="Full Name" required>
                            </div>
                            <div class="input-group mb-2 mr-sm-2 giFromsinputgroup">
-                               <div class="input-group-prepend">
-                               <div class="input-group-text">
-                                   <i class="clrfff fa fa-envelope"></i>
-                               </div>
-                               </div>
+                               
                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id" required>
                            </div>
                            <div class="input-group mb-2 mr-sm-2 giFromsinputgroup">
-                               <div class="input-group-prepend">
-                               <div class="input-group-text">
-                                   <i class="clrfff fa fa-phone"></i>
-                               </div>
-                               </div>
+                               
                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
                            </div>
                            <div class="input-group mb-2 mr-sm-2 giFromsinputgroup">
-                               <div class="input-group-prepend">
-                               <div class="input-group-text">
-                                   <i class="clrfff fa fa-university"></i>
-                               </div>
-                               </div>
+                               
                                <input type="text" class="form-control" id="company" name="company" placeholder="Company Name">
                            </div>
 <!--                           <div class="input-group giFromsinputgroup">
@@ -137,12 +119,7 @@ margin-top: 0 !important;
                                </select>
                              </div>-->
                              <div class="input-group giFromsinputgroup">
-                               <div class="input-group-prepend w-100">
-                                   <div class="input-group-text">
-                                       <i class="clrfff fa fa-comment"></i>
-                                   </div>
-                                   <textarea class="form-control" id="message" name="message" rows="1" placeholder="Enter Message"></textarea>
-                                   </div>
+                                <textarea class="form-control" id="message" name="message" rows="1" placeholder="Enter Message"></textarea>
                          </div>
                         
 
