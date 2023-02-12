@@ -207,7 +207,7 @@ And Global Infi Research stands ready to help with strategic data and insights. 
 <!-- Trending  -->
 <div class="container">
   <div class="secHead pb-2">
-  <h2 class="">TRENDING INSIGHTS</h2>
+   <h2 class="">TRENDING INSIGHTS</h2>
   </div>
 </div>
 <!-- <div class="container">
