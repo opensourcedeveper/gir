@@ -26,7 +26,8 @@ $config['base_url'] = 'http://localhost/gir';
 $config['base_url'] = 'http://www.webesty.com/demo/';
 
 */
-$config['base_url'] = 'https://tryanglemarket.com/';
+$config['base_url'] = 'http://localhost/GIR/';
+// $config['base_url'] = 'https://tryanglemarket.com/';	
 // $config['base_url'] = 'http://localhost/website02/';
 
 /*
