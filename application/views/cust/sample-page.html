@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="./css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>GI Research</title>
+</head>
+<body>
+<!-- Main Navbar -->
+<section id="topNav">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top gi-nav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+          <img src="./img/logo.jpeg" alt="" class="navlogo">
+        </a>
+        <form class="navbar-form navbar-right navbar-form-search mobsearch" role="search">
+          <div class="search-form-mobile hdn" id="search-input-mobile">
+            <div class="search-input-group d-flex">
+              <button type="button" class="btn btn-default pr-3" id="hide-search-input-mobile"><i class="fa fa-close text-danger op05" aria-hidden="true"></i></button>
+              <div class="form-group m-auto">
+                <input type="text" class="form-control" placeholder="keyword...">
+              </div>
+            </div>
+            
+          </div>
+          
+          <button type="submit" class="btn btn-default bg-prime" id="search-buttonm"><i class="fa fa-search clrfff" aria-hidden="true"></i></button>
+        </form>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenus" aria-controls="topMenus" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fa fa-bars"></i>
+        </span>
+      </button>
+    
+  <div class="collapse navbar-collapse" id="topMenus">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item active "> <a class="nav-link mainmenua" href="index.html">Home </a> </li>
+          <li class="nav-item "><a class="nav-link mainmenua" href="report-listing.html"> Reports </a></li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mainmenua" href="categories.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Category
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="container topnavDropdown">
+              <div class="row">
+                <div class="col-md-4">
+                
+                  <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link pt-1 pb-1 active" href="#">
+                        <i class="fa fa-plane f23 pr-2"></i> Airospace and defence
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link pt-1 pb-1 active" href="#">
+                          <i class="fa fa-automobile f23 pr-2"></i> Automotive & Transportation
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pt-1 pb-1 active" href="#">
+                          <i class="fa fa-wrench f23 pr-2"></i> Construction & Manufacturing
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link pt-1 pb-1 active" href="#">
+                        <i class="fa fa-male f23 pr-2"></i> Consumer Goods
+                    </a>
+                  </li>
+
+                </ul>
+                </div>
+                
+                <div class="col-md-4">
+                  <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link pt-1 pb-1 active" href="#">
+                        <i class="fa fa-bolt f23 pr-2"></i>  Energy & Power
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link pt-1 pb-1 active" href="#">
+                          <i class="fa fa-user f23 pr-2"></i>  Food & Beverages
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link pt-1 pb-1 active" href="#">
+                          <i class="fa fa-camera f23 pr-2"></i> ICT Media
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link pt-1 pb-1 active" href="#">
+                        <i class="fa fa-wrench f23 pr-2"></i> Machinery & Equipment
+                    </a>
+                  </li>
+                  
+                </ul>
+                </div>
+                
+                <div class="col-md-4">
+                  <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link pt-1 pb-1 active" href="#">
+                            <i class="fa fa-flask f23 pr-2"></i> Materials & Chemicals
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link pt-1 pb-1 active" href="#">
+                              <i class="fa fa-ambulance f23 pr-2"></i> Pharmaceuticals & Healthcare
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link pt-1 pb-1 active" href="#">
+                              <i class="fa fa-fax f23 pr-2"></i> Semiconductor & Electronics
+                          </a>
+                        </li>
+                      
+                      
+                    </ul>
+                </div>
+          
+              </div>
+            </div>
+  
+  
+  
+          </div>
+        </li> 
+      
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle mainmenua" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Media
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+          
+          <div class="container topnavDropdown">
+            <div class="row">
+              <div class="col-sm-6">
+                <a href="blog-listing.html"><i class="fa fa-newspaper-o pr-2 f24"></i> Blogs</a>
+              </div>
+              <div class="col-sm-6">
+                <a href="pr-listing.html"><i class="fa fa-newspaper-o pr-2 f24"></i>Press Release</a>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </li> 
+      <li class="nav-item"><a class="nav-link mainmenua" href="about.html"> About </a></li>
+      <li class="nav-item"><a class="nav-link mainmenua" href="contact.html"> Contact </a></li>
+    </ul>
+    <form class="navbar-form navbar-right navbar-form-search desksearch" role="search">
+      <div class="search-form-desktop hdn" id="search-input-desktop">
+        <div class="search-input-group d-flex">
+          <button type="button" class="btn btn-default pr-3" id="hide-search-input-desktop"><i class="fa fa-close text-danger op05" aria-hidden="true"></i></button>
+          <div class="form-group m-auto">
+            <input type="text" class="form-control" placeholder="keyword...">
+          </div>
+        </div>
+        
+      </div>
+      
+      <button type="submit" class="btn btn-default bg-prime" id="search-buttond"><i class="fa fa-search clrfff" aria-hidden="true"></i></button>
+    </form>
+  </div>
+  </div>
+  </nav>
+</section>
+<!-- End -->
+<!--  -->
+
+
+<!-- footer -->
+<section class="footer pb-3 pb-5 pt-3  bg-prime">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 col-sm-12 text-center">
+      <div class="ftr-data">
+        <img src="./img/logo.jpeg" alt="" class="">
+        <div class="d-flex pt-4">
+        <p class="phone pr-4 m-auto"><i class="fa fa-phone pr-3"></i>+200 4586 5978<i class="fa fa-envelope pl-3 pr-3"></i>info@globalinfiresearch.com</p>
+        <!-- <p class="phone"></p> -->
+      </div>
+        <div class="list-unstyled ftrlinks">
+          <!-- <a href="index.html">Home</a>
+          <a href="reports.html">Reports</a>
+          <a href="categories.html">categories</a>
+          <a href="blog-listing.html">Media</a>
+          <a href="about.html">About us</a>
+          <a href="contact.html">Contact us</a> -->
+          <a href="privacy-policy.html">Privacy policy</a>
+          <a href="terms.html">Terms and condition</a>
+          
+          <a href="return-policy.html">Return policy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="faqs.html">FAQS</a>
+
+        </div>
+        <h5 class="p-3 clrfff op05">“The main goal for us is to turn data into information and information into insights followed by business growth.”</h5>
+        <p class="clrfff op05">The Global Infi Research is a market research agency which is driven by technology and is determined to bring pellucidity and validity in market research domain. Global Infi Research was started in 2021 by an experienced team of professionals from various industries with a sole aim to provide top class services at favorable costs. At Global Infi Research we provide successive solutions with the help of technological flagship that helps the customers in attaining their desired goals. Our team of industry specialists continuously trace markets, granting our clients with interest in attaining competitive edge by providing them with top quality market research reports. </p>
+
+        <div class="s-icons">
+          <a href="#" class="clrfff"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="clrfff"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+</section>
+
+
+
+
+<script>
+
+</script>
+
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap-slider.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/slim.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
