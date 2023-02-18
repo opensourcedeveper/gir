@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Controller_Products.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/cust/report-listing.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/pressrelease/index.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/models/Model_smsHelper.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/core/MY_Controller.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Controller_Members.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/cust/enquiry-form.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Controller_SmsHelper.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/models/Model_emailHelper.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/reports/create.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/cust/report.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/reports/edit.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/members/index.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Controller_Orders.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/cust/custom-request.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/cust/contact-us.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/category/index.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Auth.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/config/email.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/products/edit.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/models/Model_category.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/cust/sample-request.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/templates/header_menu.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/pressrelease/create.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Cust/Controller_PressRelease.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Controller_Blogs.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Cust/Controller_Report.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Cust/Controller_Email.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Controller_Reports.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/pressrelease/edit.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Controller_PressRelease.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/cust/search.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/category/edit.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/config/routes.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/models/Model_reports.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Controller_Category.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/models/Model_pressrelease.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/cust/categories.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Controller_Index.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Cust/Controller_Blog.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/reports/index.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/views/blogs/index.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/models/Model_blogs.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/models/Model_users.php</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/assets/dist/js/script.js</file>
+            <file>file:/C:/xampp/htdocs/gir_rg/application/controllers/Cust/Controller_Index.php</file>
+        </group>
+    </open-files>
+</project-private>
